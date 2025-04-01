@@ -11,7 +11,7 @@ const NavList = styled.ul`
     display: flex;
     align-items: center;
     gap: 30px;
-    font-size: 14px;
+    font-size: 12px;
     color: var(--white);
     transition: .3s;
 
@@ -54,7 +54,7 @@ const HeadNav = styled.div`
 `
 
 const Logo = styled.img`
-    width: 150px;
+    width: 50px;
     user-select: none;
 `;
 
@@ -112,7 +112,7 @@ const Navbar = () => {
             >
 
                 <HeadNav>
-                    <Logo src="/img/iv/logo-engenharias_senac.png" alt="Logo das Engenharias Senac" />
+                    <Logo src="/img/Logo_CapitoBeer.png" alt="Logo da Capito Beer" />
                     <CloseMenuIcon
                         src="img/icons/x.svg"
                         alt="Ícone de X"
