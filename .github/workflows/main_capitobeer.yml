@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy React app to Azure Web App - capitobeer
+name: Build and deploy Node.js app to Azure Web App - capitobeer
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: read #This is required for actions/checkout
 
     steps:
       - uses: actions/checkout@v4
@@ -29,13 +29,13 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
-      - name: Zip build folder for deployment
-        run: zip -r release.zip build
+      - name: Zip artifact for deployment
+        run: zip release.zip ./* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: react-app
+          name: node-app
           path: release.zip
 
   deploy:
@@ -44,27 +44,21 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    permissions:
-      id-token: write
-      contents: read
-
+    
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: react-app
+          name: node-app
 
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_773D30CA913F481AB15BA62FCE271B11 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_DB77B6E7523546EABB9455D30FE5A7AF }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_ADC9C0CAD087440BB5995736309DA22F }}
-
-      - name: Deploy to Azure Web App
+      - name: Unzip artifact for deployment
+        run: unzip release.zip
+      
+      - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'capitobeer'
           slot-name: 'Production'
-          package: release.zip
+          package: .
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_797562CCEEC143508D720E2567E3122D }}
