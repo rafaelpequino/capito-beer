@@ -17,7 +17,7 @@ const Logo = styled.img`
 `
 
 const BtnBottom = styled.img`
-    width: 30px;
+    width: 50px;
     position: absolute;
     bottom: 30px;
     filter: invert(1);
