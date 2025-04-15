@@ -1,3 +1,4 @@
+import Article from "../Article";
 import BlogSumary from "../BlogSummary";
 import Head from "../Head";
 import Timeline from "../Timeline";
@@ -8,6 +9,7 @@ const Default = () => {
             <Head />
             <Timeline />
             <BlogSumary />
+            <Article />
         </section>
     )
 }
