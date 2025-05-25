@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Beer from "@/components/Home/Beer";
+import Break from "@/components/Home/Break";
 import Depoiments from "@/components/Home/Depoiments";
 import Info from "@/components/Home/Info";
 import Newsletter from "@/components/Home/Newsletter";
@@ -16,6 +17,7 @@ export default function Home() {
         <Beer />
         <Depoiments />
         <Newsletter />
+        <Break />
       </main>
     </div>
   );
