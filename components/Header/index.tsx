@@ -43,7 +43,7 @@ export default function Header() {
     ]
 
     return (
-        <header className="fixed top-0 z-30 w-full px-4 py-2 border-b bg-[var(--black)] flex items-center justify-between sm:px-6">
+        <header className="fixed top-0 z-30 w-full px-4 py-2 border-b bg-[var(--black)] flex items-center justify-between lg:px-6">
             <Image
                 src="/Logo_CapitoBeer_png.png"
                 alt="Logo dos cursos de Engenharia do Senac Santo Amaro"
@@ -57,7 +57,7 @@ export default function Header() {
                         <span className="sr-only">Abrir Sidebar</span>
                     </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className="bg-[var(--black)] border-none text-white sm:max-w-xs p-6">
+                <SheetContent side="left" className="bg-[var(--black)] border-none text-white lg:max-w-xs p-6">
                     <div className="h-full overflow-y-auto pr-1">
                         <nav className="flex flex-col justify-around gap-2 h-full">
                             {tooltipItems.map((item) => {
