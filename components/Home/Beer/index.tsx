@@ -13,7 +13,7 @@ export default function Beer() {
                 </div>
                 <div className="relative w-full h-[300px]">
                     <Image
-                        src="/beer2.jpg"
+                        src="/img/beer2.jpg"
                         alt="Foto de um brinde com copos de cerveja"
                         fill
                         className="object-cover rounded-[var(--radius)]"

@@ -45,7 +45,7 @@ export default function Header() {
     return (
         <header className="fixed top-0 z-30 w-full px-4 py-2 border-b bg-[var(--black)] flex items-center justify-between lg:px-6">
             <Image
-                src="/Logo_CapitoBeer_png.png"
+                src="/img/Logo_CapitoBeer_png.png"
                 alt="Logo dos cursos de Engenharia do Senac Santo Amaro"
                 width={70}
                 height={0}

@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-x-16 text-center md:text-left place-items-center md:place-items-center">
                 <div className="w-[100px]">
                     <Image
-                        src="/Logo_CapitoBeer_png.png"
+                        src="/img/Logo_CapitoBeer_png.png"
                         alt="Logo da Capito Beer"
                         width={100}
                         height={100}

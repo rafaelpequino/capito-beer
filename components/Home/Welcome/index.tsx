@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function Welcome() {
     return (
         <section
-            className="px-4 relative mt-18 w-full h-[500px] flex items-center justify-center bg-[url('/beer.jpg')] bg-cover bg-center overflow-hidden"
+            className="px-4 relative mt-18 w-full h-[500px] flex items-center justify-center bg-[url('/img/beer.jpg')] bg-cover bg-center overflow-hidden"
         >
             <div className="absolute inset-0 bg-black/60 z-0" />
 
