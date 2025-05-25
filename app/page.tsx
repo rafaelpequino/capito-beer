@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Beer from "@/components/Home/Beer";
 import Break from "@/components/Home/Break";
@@ -19,6 +20,7 @@ export default function Home() {
         <Newsletter />
         <Break />
       </main>
+      <Footer />
     </div>
   );
 }
