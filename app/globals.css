@@ -50,7 +50,7 @@
 
 :root {
   --white: #fff;
-  --black: #1d1d1d;
+  --black: #111111;
   --gray: #2e2e2e;
   --text: #78849E;
   --orange: #F9B951;
@@ -137,6 +137,10 @@
 
   h3 {
     @apply text-xl sm:text-2xl font-medium;
+  }
+
+  p {
+    @apply text-sm sm:text-base opacity-70 mb-4;
   }
 
   body {
